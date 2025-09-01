@@ -1,0 +1,21 @@
+From 2e36f8440085630f0624d0e838cb421a1fd6e765 Mon Sep 17 00:00:00 2001
+From: Guoguo <i@qwq.trade>
+Date: Mon, 1 Sep 2025 09:37:20 +0000
+Subject: [PATCH] fix: use GZIP to compress kernel module instead of XZ
+
+DKMS: https://bugs.gentoo.org/920837
+---
+ arch/arm64/configs/radxa_custom.config | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 arch/arm64/configs/radxa_custom.config
+
+diff --git a/src/arch/arm64/configs/radxa_custom.config b/src/arch/arm64/configs/radxa_custom.config
+new file mode 100644
+index 000000000000..968fc84b3ef2
+--- /dev/null
++++ b/src/arch/arm64/configs/radxa_custom.config
+@@ -0,0 +1 @@
++CONFIG_MODULE_COMPRESS_XZ=n
+-- 
+2.51.0
+
