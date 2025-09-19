@@ -16,10 +16,10 @@ Reviewed-by: Dmitry Baryshkov <dmitry.baryshkov@oss.qualcomm.com>
  drivers/soc/qcom/qcom_stats.c | 36 ++++++++++++++++++++++++++++++++++-
  1 file changed, 35 insertions(+), 1 deletion(-)
 
-diff --git a/src/drivers/soc/qcom/qcom_stats.c b/src/drivers/soc/qcom/qcom_stats.c
+diff --git a/drivers/soc/qcom/qcom_stats.c b/drivers/soc/qcom/qcom_stats.c
 index 33fd2a157446..2e380faf9080 100644
---- a/src/drivers/soc/qcom/qcom_stats.c
-+++ b/src/drivers/soc/qcom/qcom_stats.c
+--- a/drivers/soc/qcom/qcom_stats.c
++++ b/drivers/soc/qcom/qcom_stats.c
 @@ -13,6 +13,7 @@
  #include <linux/platform_device.h>
  #include <linux/seq_file.h>

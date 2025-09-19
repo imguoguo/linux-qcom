@@ -8,10 +8,10 @@ Signed-off-by: Xilin Wu <sophon@radxa.com>
  arch/arm64/configs/qcom_module_defconfig | 20 +++++++++++++++-----
  1 file changed, 15 insertions(+), 5 deletions(-)
 
-diff --git a/src/arch/arm64/configs/qcom_module_defconfig b/src/arch/arm64/configs/qcom_module_defconfig
+diff --git a/arch/arm64/configs/qcom_module_defconfig b/arch/arm64/configs/qcom_module_defconfig
 index 22f17f1ab5b5..2684315e2363 100644
---- a/src/arch/arm64/configs/qcom_module_defconfig
-+++ b/src/arch/arm64/configs/qcom_module_defconfig
+--- a/arch/arm64/configs/qcom_module_defconfig
++++ b/arch/arm64/configs/qcom_module_defconfig
 @@ -1051,8 +1051,6 @@ CONFIG_USB_NET_PLUSB=m
  CONFIG_USB_NET_MCS7830=m
  # CONFIG_WLAN_VENDOR_ADMTEK is not set

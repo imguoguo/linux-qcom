@@ -23,10 +23,10 @@ Signed-off-by: Viken Dadhaniya <viken.dadhaniya@oss.qualcomm.com>
  3 files changed, 510 insertions(+), 22 deletions(-)
  create mode 100644 include/linux/soc/qcom/qup-fw-load.h
 
-diff --git a/src/drivers/soc/qcom/qcom-geni-se.c b/src/drivers/soc/qcom/qcom-geni-se.c
+diff --git a/drivers/soc/qcom/qcom-geni-se.c b/drivers/soc/qcom/qcom-geni-se.c
 index 4cb959106efa..ef4997a5fd63 100644
---- a/src/drivers/soc/qcom/qcom-geni-se.c
-+++ b/src/drivers/soc/qcom/qcom-geni-se.c
+--- a/drivers/soc/qcom/qcom-geni-se.c
++++ b/drivers/soc/qcom/qcom-geni-se.c
 @@ -1,11 +1,15 @@
  // SPDX-License-Identifier: GPL-2.0
 -// Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
@@ -512,10 +512,10 @@ index 4cb959106efa..ef4997a5fd63 100644
  static int geni_se_probe(struct platform_device *pdev)
  {
  	struct device *dev = &pdev->dev;
-diff --git a/src/include/linux/soc/qcom/geni-se.h b/src/include/linux/soc/qcom/geni-se.h
+diff --git a/include/linux/soc/qcom/geni-se.h b/include/linux/soc/qcom/geni-se.h
 index 2996a3c28ef3..6b75171d65ec 100644
---- a/src/include/linux/soc/qcom/geni-se.h
-+++ b/src/include/linux/soc/qcom/geni-se.h
+--- a/include/linux/soc/qcom/geni-se.h
++++ b/include/linux/soc/qcom/geni-se.h
 @@ -1,11 +1,13 @@
  /* SPDX-License-Identifier: GPL-2.0 */
  /*
@@ -633,11 +633,11 @@ index 2996a3c28ef3..6b75171d65ec 100644
 +int geni_load_se_firmware(struct geni_se *se, enum geni_se_protocol_type protocol);
  #endif
  #endif
-diff --git a/src/include/linux/soc/qcom/qup-fw-load.h b/src/include/linux/soc/qcom/qup-fw-load.h
+diff --git a/include/linux/soc/qcom/qup-fw-load.h b/include/linux/soc/qcom/qup-fw-load.h
 new file mode 100644
 index 000000000000..94a6c4c10bcf
 --- /dev/null
-+++ b/src/include/linux/soc/qcom/qup-fw-load.h
++++ b/include/linux/soc/qcom/qup-fw-load.h
 @@ -0,0 +1,93 @@
 +/* SPDX-License-Identifier: GPL-2.0 */
 +/*

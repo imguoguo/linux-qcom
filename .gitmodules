@@ -1,4 +1,0 @@
-[submodule "src"]
-	path = src
-	url = https://github.com/gregkh/linux.git
-	branch = linux-6.16.y

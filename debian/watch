@@ -1,0 +1,3 @@
+version=3
+opts="mode=git, gitmode=shallow, pgpmode=gittag, uversionmangle=s|-rc|~rc|" \
+https://github.com/gregkh/linux.git refs/tags/v(.*) debian

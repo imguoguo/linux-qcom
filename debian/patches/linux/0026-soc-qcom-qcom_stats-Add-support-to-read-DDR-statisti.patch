@@ -14,10 +14,10 @@ Signed-off-by: Maulik Shah <maulik.shah@oss.qualcomm.com>
  drivers/soc/qcom/qcom_stats.c | 99 +++++++++++++++++++++++++++++++++++
  1 file changed, 99 insertions(+)
 
-diff --git a/src/drivers/soc/qcom/qcom_stats.c b/src/drivers/soc/qcom/qcom_stats.c
+diff --git a/drivers/soc/qcom/qcom_stats.c b/drivers/soc/qcom/qcom_stats.c
 index 5de99cf59b9f..33fd2a157446 100644
---- a/src/drivers/soc/qcom/qcom_stats.c
-+++ b/src/drivers/soc/qcom/qcom_stats.c
+--- a/drivers/soc/qcom/qcom_stats.c
++++ b/drivers/soc/qcom/qcom_stats.c
 @@ -1,8 +1,10 @@
  // SPDX-License-Identifier: GPL-2.0-only
  /*

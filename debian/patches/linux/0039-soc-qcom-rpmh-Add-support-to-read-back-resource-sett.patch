@@ -21,10 +21,10 @@ Signed-off-by: Maulik Shah <maulik.shah@oss.qualcomm.com>
  include/soc/qcom/tcs.h      |  2 ++
  4 files changed, 69 insertions(+), 6 deletions(-)
 
-diff --git a/src/drivers/soc/qcom/rpmh-rsc.c b/src/drivers/soc/qcom/rpmh-rsc.c
+diff --git a/drivers/soc/qcom/rpmh-rsc.c b/drivers/soc/qcom/rpmh-rsc.c
 index cb82e887b51d..18eed2cb8d30 100644
---- a/src/drivers/soc/qcom/rpmh-rsc.c
-+++ b/src/drivers/soc/qcom/rpmh-rsc.c
+--- a/drivers/soc/qcom/rpmh-rsc.c
++++ b/drivers/soc/qcom/rpmh-rsc.c
 @@ -443,6 +443,7 @@ static irqreturn_t tcs_tx_done(int irq, void *p)
  	int i;
  	unsigned long irq_status;
@@ -71,10 +71,10 @@ index cb82e887b51d..18eed2cb8d30 100644
  		trace_rpmh_send_msg(drv, tcs_id, msg->state, j, msgid, cmd);
  	}
  
-diff --git a/src/drivers/soc/qcom/rpmh.c b/src/drivers/soc/qcom/rpmh.c
+diff --git a/drivers/soc/qcom/rpmh.c b/drivers/soc/qcom/rpmh.c
 index 8903ed956312..c69f08fc76ee 100644
---- a/src/drivers/soc/qcom/rpmh.c
-+++ b/src/drivers/soc/qcom/rpmh.c
+--- a/drivers/soc/qcom/rpmh.c
++++ b/drivers/soc/qcom/rpmh.c
 @@ -175,6 +175,9 @@ static int __rpmh_write(const struct device *dev, enum rpmh_state state,
  	struct cache_req *req;
  	int i;
@@ -182,10 +182,10 @@ index 8903ed956312..c69f08fc76ee 100644
  		cmd += n[i];
  	}
  
-diff --git a/src/include/soc/qcom/rpmh.h b/src/include/soc/qcom/rpmh.h
+diff --git a/include/soc/qcom/rpmh.h b/include/soc/qcom/rpmh.h
 index bdbee1a97d36..03eea0bc798e 100644
---- a/src/include/soc/qcom/rpmh.h
-+++ b/src/include/soc/qcom/rpmh.h
+--- a/include/soc/qcom/rpmh.h
++++ b/include/soc/qcom/rpmh.h
 @@ -11,6 +11,9 @@
  
  
@@ -207,10 +207,10 @@ index bdbee1a97d36..03eea0bc798e 100644
  static inline int rpmh_write(const struct device *dev, enum rpmh_state state,
  			     const struct tcs_cmd *cmd, u32 n)
  { return -ENODEV; }
-diff --git a/src/include/soc/qcom/tcs.h b/src/include/soc/qcom/tcs.h
+diff --git a/include/soc/qcom/tcs.h b/include/soc/qcom/tcs.h
 index cff67ce25488..45b8513be2f9 100644
---- a/src/include/soc/qcom/tcs.h
-+++ b/src/include/soc/qcom/tcs.h
+--- a/include/soc/qcom/tcs.h
++++ b/include/soc/qcom/tcs.h
 @@ -51,6 +51,7 @@ struct tcs_cmd {
   * struct tcs_request: A set of tcs_cmds sent together in a TCS
   *

@@ -13,10 +13,10 @@ Signed-off-by: Viken Dadhaniya <viken.dadhaniya@oss.qualcomm.com>
  drivers/spi/spi-geni-qcom.c | 6 ++++++
  1 file changed, 6 insertions(+)
 
-diff --git a/src/drivers/spi/spi-geni-qcom.c b/src/drivers/spi/spi-geni-qcom.c
+diff --git a/drivers/spi/spi-geni-qcom.c b/drivers/spi/spi-geni-qcom.c
 index 768d7482102a..a0d8d3425c6c 100644
---- a/src/drivers/spi/spi-geni-qcom.c
-+++ b/src/drivers/spi/spi-geni-qcom.c
+--- a/drivers/spi/spi-geni-qcom.c
++++ b/drivers/spi/spi-geni-qcom.c
 @@ -671,6 +671,12 @@ static int spi_geni_init(struct spi_geni_master *mas)
  			goto out_pm;
  		}

@@ -10,10 +10,10 @@ Signed-off-by: Nascs Fang <nascs@radxa.com>
  drivers/gpu/drm/msm/dp/dp_panel.c                      | 2 +-
  3 files changed, 6 insertions(+), 2 deletions(-)
 
-diff --git a/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h b/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
+diff --git a/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h b/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
 index dab60c59e84c..f9cdc1190e35 100644
---- a/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
-+++ b/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
+--- a/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
++++ b/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
 @@ -264,7 +264,6 @@ const struct dpu_mdss_cfg dpu_sc7280_cfg = {
  	.mdss_ver = &sc7280_mdss_ver,
  	.caps = &sc7280_dpu_caps,
@@ -22,10 +22,10 @@ index dab60c59e84c..f9cdc1190e35 100644
  	.ctl_count = ARRAY_SIZE(sc7280_ctl),
  	.ctl = sc7280_ctl,
  	.sspp_count = ARRAY_SIZE(sc7280_sspp),
-diff --git a/src/drivers/gpu/drm/msm/dp/dp_display.c b/src/drivers/gpu/drm/msm/dp/dp_display.c
+diff --git a/drivers/gpu/drm/msm/dp/dp_display.c b/drivers/gpu/drm/msm/dp/dp_display.c
 index a48e6db4f156..bc26fe6228bc 100644
---- a/src/drivers/gpu/drm/msm/dp/dp_display.c
-+++ b/src/drivers/gpu/drm/msm/dp/dp_display.c
+--- a/drivers/gpu/drm/msm/dp/dp_display.c
++++ b/drivers/gpu/drm/msm/dp/dp_display.c
 @@ -931,6 +931,8 @@ enum drm_mode_status msm_dp_bridge_mode_valid(struct drm_bridge *bridge,
  	u32 mode_rate_khz = 0, supported_rate_khz = 0, mode_bpp = 0;
  	struct msm_dp *dp;
@@ -45,10 +45,10 @@ index a48e6db4f156..bc26fe6228bc 100644
  	return MODE_OK;
  }
  
-diff --git a/src/drivers/gpu/drm/msm/dp/dp_panel.c b/src/drivers/gpu/drm/msm/dp/dp_panel.c
+diff --git a/drivers/gpu/drm/msm/dp/dp_panel.c b/drivers/gpu/drm/msm/dp/dp_panel.c
 index 4e8ab75c771b..6ea3d0e3247a 100644
---- a/src/drivers/gpu/drm/msm/dp/dp_panel.c
-+++ b/src/drivers/gpu/drm/msm/dp/dp_panel.c
+--- a/drivers/gpu/drm/msm/dp/dp_panel.c
++++ b/drivers/gpu/drm/msm/dp/dp_panel.c
 @@ -101,7 +101,7 @@ static u32 msm_dp_panel_get_supported_bpp(struct msm_dp_panel *msm_dp_panel,
  		u32 mode_edid_bpp, u32 mode_pclk_khz)
  {

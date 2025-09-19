@@ -23,9 +23,33 @@ KMAKE ?= $(CUSTOM_ENV_DEFINITIONS) $(MAKE) -C "$(SRC-KERNEL)" -j$(shell nproc) \
 # Build
 #
 .PHONY: build
-build: pre_build build-defconfig build-bindeb post_build
+build: pre_build prepare-source build-defconfig build-bindeb post_build
 
-SRC-KERNEL	?=	src
+BUILD_DIR ?= $(CURDIR)/build
+SRC-KERNEL ?= $(BUILD_DIR)/src
+
+.PHONY: prepare-source
+prepare-source: $(SRC-KERNEL)
+
+$(SRC-KERNEL):
+	@mkdir -p $(BUILD_DIR)
+	@cd $(CURDIR) && uscan --download-current-version --force-download || true
+	@ORIG_TAR=$$(find $(CURDIR)/../ -name "linux*.tar.*" | head -1); \
+	if [ -n "$$ORIG_TAR" ]; then \
+		mkdir -p $(SRC-KERNEL); \
+		tar -xf "$$ORIG_TAR" -C $(SRC-KERNEL) --strip-components=1; \
+		cd $(SRC-KERNEL) && \
+		export QUILT_PATCHES=$(CURDIR)/debian/patches && \
+		export QUILT_SERIES=$(CURDIR)/debian/patches/series && \
+		quilt push -a --fuzz=0; \
+	else \
+		echo "ERROR: Could not find kernel source tarball"; \
+		exit 1; \
+	fi
+
+.PHONY: prepare-source-deb
+prepare-source-deb:
+	@cd $(CURDIR) && uscan --download-current-version --force-download || true
 
 .PHONY: build-defconfig
 build-defconfig: $(SRC-KERNEL)
@@ -46,22 +70,26 @@ build-all: $(SRC-KERNEL)
 .PHONY: build-bindeb
 build-bindeb: $(SRC-KERNEL) build-all
 	$(KMAKE) bindeb-pkg
-	mv linux-*_arm64.deb linux-upstream*_arm64.changes linux-upstream*_arm64.buildinfo ../
+	mv $(BUILD_DIR)/linux-*_arm64.deb $(BUILD_DIR)/linux-upstream*_arm64.changes $(BUILD_DIR)/linux-upstream*_arm64.buildinfo ../
 
 #
 # Clean
 #
 .PHONY: distclean
 distclean: clean
-	if [ "$(SUPPORT_CLEAN)" = "true" ]; then $(KMAKE) distclean; fi
+	if [ "$(SUPPORT_CLEAN)" = "true" ] && [ -d "$(SRC-KERNEL)" ]; then $(KMAKE) distclean; fi
 
 .PHONY: clean
 clean: clean-deb
-	if [ "$(SUPPORT_CLEAN)" = "true" ]; then $(KMAKE) clean; fi
+	if [ "$(SUPPORT_CLEAN)" = "true" ] && [ -d "$(SRC-KERNEL)" ]; then $(KMAKE) clean; fi
 
-.PHONE: clean-build
+.PHONY: clean-build
 clean-build:
-	rm -rf debian/linux-*/ linux-*_arm64.deb linux-upstream*_arm64.changes linux-upstream*_arm64.buildinfo
+	rm -rf $(BUILD_DIR)/debian/linux-*/ $(BUILD_DIR)/linux-*_arm64.deb $(BUILD_DIR)/linux-upstream*_arm64.changes $(BUILD_DIR)/linux-upstream*_arm64.buildinfo
+
+.PHONY: clean-source
+clean-source:
+	rm -rf $(BUILD_DIR)
 
 .PHONY: clean-deb
-clean-deb: clean-build
+clean-deb: clean-build clean-source

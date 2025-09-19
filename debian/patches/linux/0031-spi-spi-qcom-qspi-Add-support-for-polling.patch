@@ -8,10 +8,10 @@ Signed-off-by: Xilin Wu <sophon@radxa.com>
  drivers/spi/spi-qcom-qspi.c | 142 +++++++++++++++++++++++++++++++++++-
  1 file changed, 138 insertions(+), 4 deletions(-)
 
-diff --git a/src/drivers/spi/spi-qcom-qspi.c b/src/drivers/spi/spi-qcom-qspi.c
+diff --git a/drivers/spi/spi-qcom-qspi.c b/drivers/spi/spi-qcom-qspi.c
 index 3aeddada58e1..217b98bbc815 100644
---- a/src/drivers/spi/spi-qcom-qspi.c
-+++ b/src/drivers/spi/spi-qcom-qspi.c
+--- a/drivers/spi/spi-qcom-qspi.c
++++ b/drivers/spi/spi-qcom-qspi.c
 @@ -2,6 +2,7 @@
  // Copyright (c) 2017-2018, The Linux foundation. All rights reserved.
  

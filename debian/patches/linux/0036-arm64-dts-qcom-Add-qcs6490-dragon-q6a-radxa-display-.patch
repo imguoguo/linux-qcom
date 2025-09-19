@@ -29,10 +29,10 @@ Signed-off-by: Xilin Wu <sophon@radxa.com>
  create mode 100644 arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso
  create mode 100644 arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso
 
-diff --git a/src/arch/arm64/boot/dts/qcom/Makefile b/src/arch/arm64/boot/dts/qcom/Makefile
+diff --git a/arch/arm64/boot/dts/qcom/Makefile b/arch/arm64/boot/dts/qcom/Makefile
 index 6ee2f2cbe9d9..341633c7090d 100644
---- a/src/arch/arm64/boot/dts/qcom/Makefile
-+++ b/src/arch/arm64/boot/dts/qcom/Makefile
+--- a/arch/arm64/boot/dts/qcom/Makefile
++++ b/arch/arm64/boot/dts/qcom/Makefile
 @@ -120,11 +120,17 @@ dtb-$(CONFIG_ARCH_QCOM)	+= qcs6490-radxa-dragon-q6a.dtb
  
  qcs6490-rb3gen2-vision-mezzanine-dtbs := qcs6490-rb3gen2.dtb qcs6490-rb3gen2-vision-mezzanine.dtbo
@@ -53,15 +53,15 @@ index 6ee2f2cbe9d9..341633c7090d 100644
  dtb-$(CONFIG_ARCH_QCOM)	+= qcs8300-ride.dtb
  dtb-$(CONFIG_ARCH_QCOM)	+= qcs8550-aim300-aiot.dtb
  dtb-$(CONFIG_ARCH_QCOM)	+= qcs9100-ride.dtb
-diff --git a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-imx577.dtso b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam1-imx577.dtso
+diff --git a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-imx577.dtso b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam1-imx577.dtso
 similarity index 100%
 rename from arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-imx577.dtso
 rename to arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam1-imx577.dtso
-diff --git a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtso b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtso
+diff --git a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtso b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtso
 new file mode 100644
 index 000000000000..edd7a9f17cc3
 --- /dev/null
-+++ b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtso
++++ b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtso
 @@ -0,0 +1,89 @@
 +// SPDX-License-Identifier: BSD-3-Clause
 +/*
@@ -152,11 +152,11 @@ index 000000000000..edd7a9f17cc3
 +		bias-pull-up;
 +	};
 +};
-diff --git a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso
+diff --git a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso
 new file mode 100644
 index 000000000000..64e0c7e57a03
 --- /dev/null
-+++ b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso
++++ b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-cam3-radxa-camera-8m-219.dtso
 @@ -0,0 +1,89 @@
 +// SPDX-License-Identifier: BSD-3-Clause
 +/*
@@ -247,11 +247,11 @@ index 000000000000..64e0c7e57a03
 +		bias-pull-up;
 +	};
 +};
-diff --git a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso
+diff --git a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso
 new file mode 100644
 index 000000000000..696c7a38535d
 --- /dev/null
-+++ b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso
++++ b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtso
 @@ -0,0 +1,135 @@
 +// SPDX-License-Identifier: BSD-3-Clause
 +/*
