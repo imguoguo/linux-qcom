@@ -14,10 +14,10 @@ Acked-by: Andi Shyti <andi.shyti@kernel.org>
  drivers/i2c/busses/i2c-qcom-geni.c | 8 +++++++-
  1 file changed, 7 insertions(+), 1 deletion(-)
 
-diff --git a/src/drivers/i2c/busses/i2c-qcom-geni.c b/src/drivers/i2c/busses/i2c-qcom-geni.c
+diff --git a/drivers/i2c/busses/i2c-qcom-geni.c b/drivers/i2c/busses/i2c-qcom-geni.c
 index 13889f52b6f7..11f1089edf37 100644
---- a/src/drivers/i2c/busses/i2c-qcom-geni.c
-+++ b/src/drivers/i2c/busses/i2c-qcom-geni.c
+--- a/drivers/i2c/busses/i2c-qcom-geni.c
++++ b/drivers/i2c/busses/i2c-qcom-geni.c
 @@ -870,7 +870,13 @@ static int geni_i2c_probe(struct platform_device *pdev)
  		goto err_clk;
  	}

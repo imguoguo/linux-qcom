@@ -8,10 +8,10 @@ Signed-off-by: Nascs Fang <nascs@radxa.com>
  .../dts/qcom/qcs6490-radxa-dragon-q6a.dts     | 91 +++++++++++++++++++
  1 file changed, 91 insertions(+)
 
-diff --git a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts
+diff --git a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts
 index a9f55a5f83ec..c37eacbdfde7 100644
---- a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts
-+++ b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts
+--- a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts
++++ b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a.dts
 @@ -1358,6 +1358,97 @@ &sdc2_data {
  };
  

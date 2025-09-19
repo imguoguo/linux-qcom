@@ -9,10 +9,10 @@ Subject: [PATCH 25/49] scripts: Add PKGBUILD for testing on Arch Linux ARM
  2 files changed, 132 insertions(+)
  create mode 100644 scripts/package/PKGBUILD-radxa
 
-diff --git a/src/scripts/Makefile.package b/src/scripts/Makefile.package
+diff --git a/scripts/Makefile.package b/scripts/Makefile.package
 index 74bcb9e7f7a4..bc3d3b9342d6 100644
---- a/src/scripts/Makefile.package
-+++ b/src/scripts/Makefile.package
+--- a/scripts/Makefile.package
++++ b/scripts/Makefile.package
 @@ -158,6 +158,18 @@ pacman-pkg:
  		KBUILD_REVISION="$(shell $(srctree)/scripts/build-version)" \
  		makepkg $(MAKEPKGOPTS)
@@ -40,11 +40,11 @@ index 74bcb9e7f7a4..bc3d3b9342d6 100644
  	@echo '  dir-pkg             - Build the kernel as a plain directory structure'
  	@echo '  tar-pkg             - Build the kernel as an uncompressed tarball'
  	@echo '  targz-pkg           - Build the kernel as a gzip compressed tarball'
-diff --git a/src/scripts/package/PKGBUILD-radxa b/src/scripts/package/PKGBUILD-radxa
+diff --git a/scripts/package/PKGBUILD-radxa b/scripts/package/PKGBUILD-radxa
 new file mode 100644
 index 000000000000..1588f1cb5940
 --- /dev/null
-+++ b/src/scripts/package/PKGBUILD-radxa
++++ b/scripts/package/PKGBUILD-radxa
 @@ -0,0 +1,119 @@
 +# SPDX-License-Identifier: GPL-2.0-only
 +# Maintainer: Thomas Weißschuh <linux@weissschuh.net>
@@ -146,7 +146,7 @@ index 000000000000..1588f1cb5940
 +
 +	echo "Adding symlink..."
 +	mkdir -p "${pkgdir}/usr/src"
-+	ln -sr "${builddir}" "${pkgdir}/usr/src/${pkgbase}"
++	ln -sr "${builddir}" "${pkgdir}/usr/${pkgbase}"
 +}
 +
 +_package-api-headers() {

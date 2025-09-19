@@ -8,10 +8,10 @@ Subject: [PATCH 11/49] phy: qcom: qmp-combo: temporarily fix the orientation
  drivers/phy/qualcomm/phy-qcom-qmp-combo.c | 9 ++++++++-
  1 file changed, 8 insertions(+), 1 deletion(-)
 
-diff --git a/src/drivers/phy/qualcomm/phy-qcom-qmp-combo.c b/src/drivers/phy/qualcomm/phy-qcom-qmp-combo.c
+diff --git a/drivers/phy/qualcomm/phy-qcom-qmp-combo.c b/drivers/phy/qualcomm/phy-qcom-qmp-combo.c
 index b09fa00e9fe7..419c1eed18af 100644
---- a/src/drivers/phy/qualcomm/phy-qcom-qmp-combo.c
-+++ b/src/drivers/phy/qualcomm/phy-qcom-qmp-combo.c
+--- a/drivers/phy/qualcomm/phy-qcom-qmp-combo.c
++++ b/drivers/phy/qualcomm/phy-qcom-qmp-combo.c
 @@ -2424,6 +2424,13 @@ static bool qmp_combo_configure_dp_mode(struct qmp_combo *qmp)
  	const struct phy_configure_opts_dp *dp_opts = &qmp->dp_opts;
  	u32 val;

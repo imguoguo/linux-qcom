@@ -25,10 +25,10 @@ Signed-off-by: Viken Dadhaniya <viken.dadhaniya@oss.qualcomm.com>
  4 files changed, 29 insertions(+)
  create mode 100644 Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml
 
-diff --git a/src/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml b/src/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml
+diff --git a/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml b/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml
 index 9f66a3bb1f80..51534953a69c 100644
---- a/src/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml
-+++ b/src/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml
+--- a/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml
++++ b/Documentation/devicetree/bindings/i2c/qcom,i2c-geni-qcom.yaml
 @@ -75,6 +75,7 @@ required:
  
  allOf:
@@ -37,10 +37,10 @@ index 9f66a3bb1f80..51534953a69c 100644
    - if:
        properties:
          compatible:
-diff --git a/src/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml b/src/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml
+diff --git a/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml b/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml
 index dd33794b3534..ed7b3909d87d 100644
---- a/src/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml
-+++ b/src/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml
+--- a/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml
++++ b/Documentation/devicetree/bindings/serial/qcom,serial-geni-qcom.yaml
 @@ -12,6 +12,7 @@ maintainers:
  
  allOf:
@@ -49,11 +49,11 @@ index dd33794b3534..ed7b3909d87d 100644
  
  properties:
    compatible:
-diff --git a/src/Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml b/src/Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml
+diff --git a/Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml b/Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml
 new file mode 100644
 index 000000000000..6a34f05a07e8
 --- /dev/null
-+++ b/src/Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml
++++ b/Documentation/devicetree/bindings/soc/qcom/qcom,se-common-props.yaml
 @@ -0,0 +1,26 @@
 +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
 +%YAML 1.2
@@ -81,10 +81,10 @@ index 000000000000..6a34f05a07e8
 +      By default, FIFO mode (PIO/CPU DMA) will be selected.
 +
 +additionalProperties: true
-diff --git a/src/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml b/src/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml
+diff --git a/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml b/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml
 index 2e20ca313ec1..d12c5a060ed0 100644
---- a/src/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml
-+++ b/src/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml
+--- a/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml
++++ b/Documentation/devicetree/bindings/spi/qcom,spi-geni-qcom.yaml
 @@ -25,6 +25,7 @@ description:
  
  allOf:

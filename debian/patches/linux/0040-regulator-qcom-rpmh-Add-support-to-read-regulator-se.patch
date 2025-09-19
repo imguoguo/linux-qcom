@@ -29,10 +29,10 @@ Signed-off-by: Kamal Wadhwa <kamal.wadhwa@oss.qualcomm.com>
  drivers/regulator/qcom-rpmh-regulator.c | 71 +++++++++++++++++++++++++
  1 file changed, 71 insertions(+)
 
-diff --git a/src/drivers/regulator/qcom-rpmh-regulator.c b/src/drivers/regulator/qcom-rpmh-regulator.c
+diff --git a/drivers/regulator/qcom-rpmh-regulator.c b/drivers/regulator/qcom-rpmh-regulator.c
 index 7870722b6ee2..ba5bd4ecec74 100644
---- a/src/drivers/regulator/qcom-rpmh-regulator.c
-+++ b/src/drivers/regulator/qcom-rpmh-regulator.c
+--- a/drivers/regulator/qcom-rpmh-regulator.c
++++ b/drivers/regulator/qcom-rpmh-regulator.c
 @@ -1,6 +1,7 @@
  // SPDX-License-Identifier: GPL-2.0
  // Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.

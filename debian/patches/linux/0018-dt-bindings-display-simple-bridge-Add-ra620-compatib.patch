@@ -16,10 +16,10 @@ Acked-by: Krzysztof Kozlowski <krzysztof.kozlowski@linaro.org>
  .../devicetree/bindings/display/bridge/simple-bridge.yaml        | 1 +
  1 file changed, 1 insertion(+)
 
-diff --git a/src/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml b/src/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml
+diff --git a/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml b/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml
 index 43cf4df9811a..421f99ca42d9 100644
---- a/src/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml
-+++ b/src/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml
+--- a/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml
++++ b/Documentation/devicetree/bindings/display/bridge/simple-bridge.yaml
 @@ -28,6 +28,7 @@ properties:
        - enum:
            - adi,adv7123

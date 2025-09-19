@@ -14,10 +14,10 @@ Signed-off-by: Viken Dadhaniya <viken.dadhaniya@oss.qualcomm.com>
  drivers/tty/serial/qcom_geni_serial.c | 8 +++++++-
  1 file changed, 7 insertions(+), 1 deletion(-)
 
-diff --git a/src/drivers/tty/serial/qcom_geni_serial.c b/src/drivers/tty/serial/qcom_geni_serial.c
+diff --git a/drivers/tty/serial/qcom_geni_serial.c b/drivers/tty/serial/qcom_geni_serial.c
 index 0293b6210aa6..9f905ae3c127 100644
---- a/src/drivers/tty/serial/qcom_geni_serial.c
-+++ b/src/drivers/tty/serial/qcom_geni_serial.c
+--- a/drivers/tty/serial/qcom_geni_serial.c
++++ b/drivers/tty/serial/qcom_geni_serial.c
 @@ -1161,7 +1161,13 @@ static int qcom_geni_serial_port_setup(struct uart_port *uport)
  	int ret;
  

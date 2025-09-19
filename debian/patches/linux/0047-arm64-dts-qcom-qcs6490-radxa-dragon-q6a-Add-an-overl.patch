@@ -11,10 +11,10 @@ Signed-off-by: Xilin Wu <sophon@radxa.com>
  2 files changed, 18 insertions(+)
  create mode 100644 arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso
 
-diff --git a/src/arch/arm64/boot/dts/qcom/Makefile b/src/arch/arm64/boot/dts/qcom/Makefile
+diff --git a/arch/arm64/boot/dts/qcom/Makefile b/arch/arm64/boot/dts/qcom/Makefile
 index 341633c7090d..647322a9fce1 100644
---- a/src/arch/arm64/boot/dts/qcom/Makefile
-+++ b/src/arch/arm64/boot/dts/qcom/Makefile
+--- a/arch/arm64/boot/dts/qcom/Makefile
++++ b/arch/arm64/boot/dts/qcom/Makefile
 @@ -123,6 +123,7 @@ qcs6490-rb3gen2-industrial-mezzanine-dtbs := qcs6490-rb3gen2.dtb qcs6490-rb3gen2
  qcs6490-radxa-dragon-q6a-cam1-imx577-dtbs	:= qcs6490-radxa-dragon-q6a.dtb qcs6490-radxa-dragon-q6a-cam1-imx577.dtbo
  qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219-dtbs	:= qcs6490-radxa-dragon-q6a.dtb qcs6490-radxa-dragon-q6a-cam2-radxa-camera-8m-219.dtbo
@@ -31,11 +31,11 @@ index 341633c7090d..647322a9fce1 100644
  dtb-$(CONFIG_ARCH_QCOM)	+= qcs6490-radxa-dragon-q6a-radxa-display-10fhd.dtb
  dtb-$(CONFIG_ARCH_QCOM)	+= qcs8300-ride.dtb
  dtb-$(CONFIG_ARCH_QCOM)	+= qcs8550-aim300-aiot.dtb
-diff --git a/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso
+diff --git a/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso
 new file mode 100644
 index 000000000000..806014e13e2b
 --- /dev/null
-+++ b/src/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso
++++ b/arch/arm64/boot/dts/qcom/qcs6490-radxa-dragon-q6a-kvm.dtso
 @@ -0,0 +1,16 @@
 +// SPDX-License-Identifier: BSD-3-Clause
 +/*

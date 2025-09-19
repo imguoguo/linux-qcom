@@ -9,10 +9,10 @@ This enables 4K@30 via DisplayPort.
  .../msm/disp/dpu1/catalog/dpu_7_2_sc7280.h    | 28 +++++++++++++++----
  1 file changed, 23 insertions(+), 5 deletions(-)
 
-diff --git a/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h b/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
+diff --git a/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h b/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
 index e9625c48c567..dab60c59e84c 100644
---- a/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
-+++ b/src/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
+--- a/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
++++ b/drivers/gpu/drm/msm/disp/dpu1/catalog/dpu_7_2_sc7280.h
 @@ -9,9 +9,11 @@
  
  static const struct dpu_caps sc7280_dpu_caps = {

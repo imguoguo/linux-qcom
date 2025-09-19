@@ -92,10 +92,7 @@ dch: debian/changelog
 	--dch-opt=--upstream --commit --commit-msg="feat: release %(version)s"
 
 .PHONY: deb
-deb: debian pre_debuild debuild post_debuild
-
-.PHONY: pre_debuild
-pre_debuild:
+deb: debian debuild post_debuild
 
 .PHONY: debuild
 debuild:
