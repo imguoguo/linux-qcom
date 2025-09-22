@@ -1,4 +1,4 @@
-linux-qcom (6.16.4-1) unstable; urgency=medium
+linux-qcom (6.16.7-1) unstable; urgency=medium
 
   [ "Radxa Computer Co., Ltd" ]
   * Add initial Debian packaging support
