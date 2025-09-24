@@ -34,7 +34,7 @@ prepare-source: $(SRC-KERNEL)
 $(SRC-KERNEL):
 	@mkdir -p $(BUILD_DIR)
 	@cd $(CURDIR) && uscan --download-current-version --force-download || true
-	@ORIG_TAR=$$(find $(CURDIR)/../ -name "linux*.orig.tar.*" | head -1); \
+	@ORIG_TAR=$$(find $(CURDIR)/../ -name "linux*.tar.*" | head -1); \
 	if [ -n "$$ORIG_TAR" ]; then \
 		mkdir -p $(SRC-KERNEL); \
 		tar -xf "$$ORIG_TAR" -C $(SRC-KERNEL) --strip-components=1; \

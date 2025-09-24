@@ -17,6 +17,7 @@ Build-Depends: debhelper (>=12~),
                libyaml-dev,
                rsync,
                zstd,
+               quilt,
 
 Package: linux-image-radxa-dragon-q6a
 Architecture: all
